@@ -54,9 +54,9 @@
 				<tr><div class="textHead">Attributes</div>	</tr>
 				<tr>
 					<td class="col1">STR<br><div class="small">Strength</div></td>
-					<td><input type="number" name="attr_STR" value="8" title="Strength Score @{STR}" /></td>
-					<td><input type="number" name="attr_STR_max" value="[[floor(@{STR}/2-5)]]" disabled="true" title="Strength Modifier @{STR|max}" /></td>
-					<td><button type="roll" name="roll_STRCheck" value="&{template:skill} {{name=Strength}} {{skill=[[1d20+@{STR|max}[STR]+@{CT}[CT]]]}}" title="Roll Strength %{STRCheck}"></button></td>
+					<td><input type="number" name="attr_STR" value="3" title="Strength Score @{STR}" /></td>
+					<td><input type="number" name="attr_STR_max" value="[[floor(@{STR}/2-5)]]" title="Strength Modifier @{STR|max}" /></td>
+					<td><button type="roll" name="roll_STRCheck" value="&{template:skill} {{name=Strength}} {{skill=[[([STR]-1)d6+@{STR|max}+1d6!]]}}" title="Roll Strength %{STRCheck}"></button></td>
 				</tr>
 				<tr>
 					<td class="col1">DEX<br><div class="small">Dexterity</div></td>
